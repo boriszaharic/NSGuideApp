@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.bzaharic.nsguideapp.Around">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="245dp"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/viewPager"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/btnImages"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/button_photos"/>
+
+        <ImageButton
+            android:id="@+id/btnStars"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/button_star" />
+
+        <ImageButton
+            android:id="@+id/btnFlegs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/button_flag" />
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/button_info" />
+
+        <ImageButton
+            android:id="@+id/btnRide"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/button_transport" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutButtons"
+        android:text="Crkva Imena Marijinog je rimokatolička crkva, koja se nalazi u centru Novog Sada, na Trgu slobode. Prva katolička crkva u Novom Sadu iz prvih decenija 18. veka bila je skromna, privremena građevina koja je 1742. porušena. Na istom mestu izgrađena je nova. Katolički nadbiskup Gabor Patačić osvetio je novu crkvu 1742. godine. U bombardovanju 12. juna 1849. godine i ona je bila zapaljena i srušen joj je toranj. U kasnijoj obnovi prvobitni toranj nije u celosti rekonstruisan. Novosadski katolici nisu bili zadovoljni izgledom, pa su u Gradskoj skupštini dali inicijativu da se podigne takav koji će priličiti Novom Sadu kao slobodnom kraljevskom gradu."
+        android:textSize="16sp" />
+</RelativeLayout>

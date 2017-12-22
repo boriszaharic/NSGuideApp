@@ -43,4 +43,5 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, TourActivity.class);
         startActivity(i);
     }
+
 }

@@ -19,6 +19,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Around"></activity>
+        <activity android:name=".Tour" />
+        <activity android:name=".TourActivity" />
     </application>
 
 </manifest>

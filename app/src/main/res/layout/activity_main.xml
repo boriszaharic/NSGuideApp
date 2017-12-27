@@ -55,7 +55,8 @@
         android:layout_marginTop="122dp"
         android:padding="0dp"
         android:scaleType="fitXY"
-        android:src="@drawable/button_favorite" />
+        android:src="@drawable/button_favorite"
+        android:onClick="btnFavorite"/>
 
     <TextView
         android:id="@+id/textView"

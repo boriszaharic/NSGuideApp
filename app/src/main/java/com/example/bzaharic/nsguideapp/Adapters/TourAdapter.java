@@ -1,4 +1,4 @@
-package com.example.bzaharic.nsguideapp;
+package com.example.bzaharic.nsguideapp.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.bzaharic.nsguideapp.R;
+import com.example.bzaharic.nsguideapp.Model.Tour;
 
 import java.util.List;
 
@@ -17,16 +20,18 @@ import java.util.List;
 public class TourAdapter extends RecyclerView.Adapter<TourAdapter.TourViewHolder> {
     private Context mCtx;
     private List<Tour> tourList;
+    private ItemClicked itemClicked;
 
-    public TourAdapter(Context mCtx, List<Tour> tourList) {
+    public TourAdapter(Context mCtx, List<Tour> tourList, ItemClicked itemClicked) {
         this.mCtx = mCtx;
         this.tourList = tourList;
+        this.itemClicked = itemClicked;
     }
 
     @Override
     public TourViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.list_layout, null);
+        View view = inflater.inflate(R.layout.list_layout_tour, null);
         return new TourViewHolder(view);
     }
 
@@ -51,7 +56,7 @@ public class TourAdapter extends RecyclerView.Adapter<TourAdapter.TourViewHolder
         ImageView imageView;
         TextView textViewTitle, textViewDesc, textViewSizeOfTour, textViewDuration;
 
-        public TourViewHolder(View itemView) {
+        public TourViewHolder(final View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.imageView);
@@ -60,6 +65,19 @@ public class TourAdapter extends RecyclerView.Adapter<TourAdapter.TourViewHolder
             textViewSizeOfTour = itemView.findViewById(R.id.textViewDist);
             textViewDuration = itemView.findViewById(R.id.textViewDuration);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    itemClicked.itemClicked();
+                }
+            });
+
         }
     }
+
+    public interface ItemClicked {
+        void itemClicked();
+    }
 }
+
+

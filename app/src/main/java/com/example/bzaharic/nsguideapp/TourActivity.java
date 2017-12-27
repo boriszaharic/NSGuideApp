@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
+
+import com.example.bzaharic.nsguideapp.Adapters.TourAdapter;
+import com.example.bzaharic.nsguideapp.Model.Tour;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
  * Created by bzaharic on 22.12.17..
  */
 
-public class TourActivity extends AppCompatActivity {
+public class TourActivity extends AppCompatActivity implements TourAdapter.ItemClicked {
     RecyclerView recyclerView;
     TourAdapter tourAdapter;
     List<Tour> tourList;
@@ -22,7 +24,7 @@ public class TourActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_tour);
+        setContentView(R.layout.activity_tour);
 
         // Tour list
 
@@ -33,8 +35,7 @@ public class TourActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
-        //adding some items to our list
+        //adding items to our list
         tourList.add(
                 new Tour(
                         1,
@@ -90,16 +91,16 @@ public class TourActivity extends AppCompatActivity {
                         R.drawable.slide3));
 
         //creating recyclerview adapter
-        TourAdapter adapter = new TourAdapter(this, tourList);
+        TourAdapter adapter = new TourAdapter(this, tourList, this);
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
 
     }
 
-    public void tourDetail(View view){
+    @Override
+    public void itemClicked() {
         Intent i = new Intent(this, TourDetail.class);
         startActivity(i);
     }
-
 }

@@ -4,6 +4,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.bzaharic.nsguideapp.Adapters.ViewPagerAdapter;
+import com.example.bzaharic.nsguideapp.R;
+
 public class Around extends AppCompatActivity {
 
     ViewPager viewPager;

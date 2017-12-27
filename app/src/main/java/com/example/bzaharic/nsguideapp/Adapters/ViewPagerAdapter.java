@@ -1,4 +1,4 @@
-package com.example.bzaharic.nsguideapp;
+package com.example.bzaharic.nsguideapp.Adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.example.bzaharic.nsguideapp.R;
 
 /**
  * Created by bzaharic on 20.12.17..

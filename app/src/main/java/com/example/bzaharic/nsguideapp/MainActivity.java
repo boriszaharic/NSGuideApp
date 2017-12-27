@@ -15,7 +15,6 @@ import org.androidannotations.annotations.EActivity;
 public class MainActivity extends AppCompatActivity {
 
 
-
     @AfterViews
     void afterViews(){
         CharSequence languages[] = new CharSequence[] {"Srpski","Engleski"};

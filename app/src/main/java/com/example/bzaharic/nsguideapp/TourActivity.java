@@ -11,6 +11,7 @@ import com.example.bzaharic.nsguideapp.Model.Tour;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,13 +26,15 @@ public class TourActivity extends AppCompatActivity implements TourAdapter.ItemC
     TourAdapter tourAdapter;
     List<Tour> tourList;
 
+    @ViewById
+    RecyclerView recyclerView;
+
 
     @AfterViews
     void afterViews(){
         // Tour list
         tourList = new ArrayList<>();
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

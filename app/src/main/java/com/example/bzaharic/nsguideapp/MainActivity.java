@@ -7,13 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+
+@EActivity(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+
+    @AfterViews
+    void afterViews(){
         CharSequence languages[] = new CharSequence[] {"Srpski","Engleski"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -25,21 +29,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         builder.show();
-
     }
 
-    public void btnAround(View view){
-        Intent i = new Intent(this, Around.class);
+
+    @Click
+    void btnAround(View view){
+        Intent i = new Intent(this, AroundActivity_.class);
         startActivity(i);
     }
 
-    public void btnTour(View view){
-        Intent i = new Intent(this, TourActivity.class);
+    @Click
+    void btnTour(View view){
+        Intent i = new Intent(this, TourActivity_.class);
         startActivity(i);
     }
 
-    public void btnFavorite(View view){
-        Intent i = new Intent(this, FavoriteActivity.class);
+    @Click
+    void btnFavorite(View view){
+        Intent i = new Intent(this, FavoriteActivity_.class);
         startActivity(i);
     }
 

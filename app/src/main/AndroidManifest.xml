@@ -10,18 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Welcome">
+        <activity android:name=".WelcomeActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Around"></activity>
-        <activity android:name=".FavoriteActivity" />
-        <activity android:name=".TourActivity" />
-        <activity android:name=".TourDetail" />
+        <activity android:name=".MainActivity_" />
+        <activity android:name=".AroundActivity_" />
+        <activity android:name=".FavoriteActivity_" />
+        <activity android:name=".TourActivity_" />
+        <activity android:name=".TourDetailActivity_" />
     </application>
 
 </manifest>

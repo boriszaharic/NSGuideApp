@@ -9,6 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import com.example.bzaharic.nsguideapp.Adapters.TourAdapter;
 import com.example.bzaharic.nsguideapp.Model.Tour;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,18 +19,16 @@ import java.util.List;
  * Created by bzaharic on 22.12.17..
  */
 
+@EActivity(R.layout.activity_tour)
 public class TourActivity extends AppCompatActivity implements TourAdapter.ItemClicked {
     RecyclerView recyclerView;
     TourAdapter tourAdapter;
     List<Tour> tourList;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tour);
 
+    @AfterViews
+    void afterViews(){
         // Tour list
-
         tourList = new ArrayList<>();
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -95,12 +96,13 @@ public class TourActivity extends AppCompatActivity implements TourAdapter.ItemC
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
-
     }
+
+
 
     @Override
     public void itemClicked() {
-        Intent i = new Intent(this, TourDetail.class);
+        Intent i = new Intent(this, TourDetailActivity_.class);
         startActivity(i);
     }
 }

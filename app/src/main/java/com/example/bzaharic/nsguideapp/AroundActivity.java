@@ -7,18 +7,19 @@ import android.os.Bundle;
 import com.example.bzaharic.nsguideapp.Adapters.ViewPagerAdapter;
 import com.example.bzaharic.nsguideapp.R;
 
-public class Around extends AppCompatActivity {
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
+@EActivity(R.layout.activity_around)
+public class AroundActivity extends AppCompatActivity {
+
+    @ViewById
     ViewPager viewPager;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_around);
-
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
+    @AfterViews
+    void afterViews(){
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(viewPagerAdapter);
-
     }
 }

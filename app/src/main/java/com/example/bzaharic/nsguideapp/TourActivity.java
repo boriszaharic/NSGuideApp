@@ -22,7 +22,7 @@ import java.util.List;
 
 @EActivity(R.layout.activity_tour)
 public class TourActivity extends AppCompatActivity implements TourAdapter.ItemClicked {
-    RecyclerView recyclerView;
+
     TourAdapter tourAdapter;
     List<Tour> tourList;
 

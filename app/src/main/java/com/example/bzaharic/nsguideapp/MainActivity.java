@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     void afterViews(){
         CharSequence languages[] = new CharSequence[] {"Srpski","Engleski"};
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Izbor jezika:");
         builder.setItems(languages, new DialogInterface.OnClickListener() {
             @Override
@@ -33,20 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Click
     void btnAround(View view){
-        Intent i = new Intent(this, AroundActivity_.class);
-        startActivity(i);
+        AroundActivity_.intent(this).start();
     }
+
+
 
     @Click
     void btnTour(View view){
-        Intent i = new Intent(this, TourActivity_.class);
-        startActivity(i);
+        TourActivity_.intent(this).start();
     }
 
     @Click
     void btnFavorite(View view){
-        Intent i = new Intent(this, FavoriteActivity_.class);
-        startActivity(i);
+        FavoriteActivity_.intent(this).start();
     }
 
 }

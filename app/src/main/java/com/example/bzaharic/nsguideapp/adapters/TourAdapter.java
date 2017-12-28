@@ -1,4 +1,4 @@
-package com.example.bzaharic.nsguideapp.Adapters;
+package com.example.bzaharic.nsguideapp.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bzaharic.nsguideapp.R;
-import com.example.bzaharic.nsguideapp.Model.Tour;
+import com.example.bzaharic.nsguideapp.model.Tour;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.bzaharic.nsguideapp.Adapters;
+package com.example.bzaharic.nsguideapp.adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;

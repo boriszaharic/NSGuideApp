@@ -10,25 +10,21 @@ import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_welcome)
 public class WelcomeActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 2500;
+    private static final int SPLASH_TIME_OUT = 2500;
 
     @ViewById
     ImageView image;
 
+    @UiThread(delay = SPLASH_TIME_OUT)
     @AfterViews
     void afterViews(){
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent homeIntent = new Intent(getApplicationContext(), MainActivity_.class);
-                startActivity(homeIntent);
-                finish();
-            }
-        },SPLASH_TIME_OUT);
+        MainActivity_.intent(this).start();
+        finish();
     }
 }

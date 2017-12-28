@@ -1,13 +1,12 @@
 package com.example.bzaharic.nsguideapp;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.bzaharic.nsguideapp.Adapters.TourAdapter;
-import com.example.bzaharic.nsguideapp.Model.Tour;
+import com.example.bzaharic.nsguideapp.adapters.TourAdapter;
+import com.example.bzaharic.nsguideapp.model.Tour;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;

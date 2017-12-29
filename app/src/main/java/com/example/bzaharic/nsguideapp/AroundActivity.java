@@ -1,8 +1,10 @@
 package com.example.bzaharic.nsguideapp;
 
+import android.media.Image;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.bzaharic.nsguideapp.adapters.ViewPagerAdapter;
 import com.example.bzaharic.nsguideapp.database.DatabaseHelper;
@@ -19,17 +21,50 @@ import org.androidannotations.annotations.PageScrolled;
 import org.androidannotations.annotations.ViewById;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 @EActivity(R.layout.activity_around)
 public class AroundActivity extends AppCompatActivity {
 
     @ViewById
+    TextView txtDescription;
+
+    @ViewById
     ViewPager viewPager;
+
+    @Bean
+    MonumentDAOWrapper monumentDAOWrapper;
 
     @AfterViews
     void afterViews(){
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(viewPagerAdapter);
+        List<Monument> allMonuments = monumentDAOWrapper.getAllMonuments();
+        List<String> imageUris = new ArrayList<>();
+        final List<String> descriptions = new ArrayList<>();
+        for(Monument monument:allMonuments){
+            imageUris.add(monument.getImageUri());
+            descriptions.add(monument.getDescription());
+        }
+        viewPagerAdapter.setImages(imageUris);
+
+        viewPagerAdapter.notifyDataSetChanged();
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                txtDescription.setText(descriptions.get(position));
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 }

@@ -80,15 +80,17 @@ public class UtilityDatabaseClass {
     Monument futoskaPijaca = new Monument("Futoška pijaca","http://novisad.travel/wp-content/uploads/2017/03/futoska-pijaca-800x640.jpg","Futoška pijaca jedna je od najposećenijih pijaca i najbolje snabdevenih poljoprivrednim proizvodima i raznovrsnom mešovitom robom. Preuređena Futoška pijaca, novim izgledom uklapa se u urbanistički sve uređeniju okolinu i sa pravom zauzima najprometniju lokaciju u Novom Sadu.");
     Monument ribljaPijaca = new Monument("Riblja pijaca","http://novisad.travel/wp-content/uploads/2017/03/riblja-pijaca-800x720.jpg","Riblja pijaca  je od mesta koje je sredinom 19. veka služilo za snabdevanje građana svežom ribom, vremenom prerasla u klasičnu zelenu pijacu, sa bogatom ponudom svežih poljoprivrednih proizvoda, živinskog mesa, ribe i mešovite robe. Danas je Riblja pijaca mesto gde se mogu kupiti proizvodi sa geografskim poreklom iz Novog Sada i okoline, ali i mesto susretnja i prezentovanja tradicije u proizvodnji hrane, zanatskih proizvoda, vina, meda… Sa obnovljenim i uređenim Trgom republike Riblja pijaca postaje prostor na kome se dešavaju različite manifestacije u slavu hrane i vina.");
 
-    // Restorani
-
-
     // Poslasticarnice
     Monument teatar = new Monument("Teatar","http://novisad.travel/wp-content/uploads/2017/03/teatar-site-2-800x734.jpg","TEATAR\n" + "Adresa: Pozorišni trg 7\n" + "Telefon: +381 21 422 032, + 381 21 447 452\n" + "E-mail: gradskibarteatar@yahoo.com");
     Monument mozzart = new Monument("Mocart","http://novisad.travel/wp-content/uploads/2017/03/mocart-site-2-800x550.jpg","Jovana Popovića 10, Telep\n" + "telefon: +381 21 402 662\n" + "Radnička 45\n" + "telefon: +381 60 51 09 113\n" + "Kornelija Stankovića 11\n" + "telefon: +381 21 530 101, +381 60 51 09 102\n" + "Bulevar Evrope 28\n" + "telefon: +381 21 633 47 47, +381 60 51 09 106\n" + "Riblja pijaca, lokal 40\n" + "telefon: +381 61 61 92 948\n" + "E-mail: mozart@neobee.net\n" + "Web site: www.mozartcaffens.com");
     Monument multiTarde = new Monument("Multi Tarte","http://novisad.travel/wp-content/uploads/2017/03/multi-tarte-site-pos-1-800x800.jpg","MULTI TARTE\n" + "Adresa: Beogradska 10, Petrovaradin\n" + "Telefon: +381 21 432 258\n" + "E-mail: multitarte@yahoo.com");
     Monument vremeplov = new Monument("Vremeplov","http://novisad.travel/wp-content/uploads/2017/03/vremeplov-site-pos-1-800x642.jpg","Adresa: Bul.oslobođenja 96\n" + "Telefon: +381 21 66 11 855, + 381 21 47 22 888\n" + "Web site: www.vremeplov.net");
 
+    // Restorani
+
+
+
+    // Kafe barovi
 
 
     void addMonumentsInDatabase(){

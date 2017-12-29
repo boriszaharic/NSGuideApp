@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.bzaharic.nsguideapp.R;
 import com.example.bzaharic.nsguideapp.model.Tour;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**

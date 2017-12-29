@@ -6,9 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.bzaharic.nsguideapp.adapters.TourAdapter;
+import com.example.bzaharic.nsguideapp.database.MonumentDAOWrapper;
+import com.example.bzaharic.nsguideapp.model.Monument;
 import com.example.bzaharic.nsguideapp.model.Tour;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -98,6 +101,7 @@ public class TourActivity extends AppCompatActivity implements TourAdapter.ItemC
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
+
     }
 
 

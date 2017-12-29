@@ -3,6 +3,7 @@ package com.example.bzaharic.nsguideapp;
 import android.media.Image;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -40,8 +41,8 @@ public class AroundActivity extends AppCompatActivity {
     void afterViews(){
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(viewPagerAdapter);
-        List<Monument> allMonuments = monumentDAOWrapper.getAllMonuments();
-        List<String> imageUris = new ArrayList<>();
+        final List<Monument> allMonuments = monumentDAOWrapper.getAllMonuments();
+        final List<String> imageUris = new ArrayList<>();
         final List<String> descriptions = new ArrayList<>();
         for(Monument monument:allMonuments){
             imageUris.add(monument.getImageUri());
@@ -54,6 +55,7 @@ public class AroundActivity extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 txtDescription.setText(descriptions.get(position));
+                txtDescription.setMovementMethod(new ScrollingMovementMethod());
             }
 
             @Override

@@ -63,6 +63,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/layoutButtons"
-        android:text="Crkva Imena Marijinog je rimokatolička crkva, koja se nalazi u centru Novog Sada, na Trgu slobode. Prva katolička crkva u Novom Sadu iz prvih decenija 18. veka bila je skromna, privremena građevina koja je 1742. porušena. Na istom mestu izgrađena je nova. Katolički nadbiskup Gabor Patačić osvetio je novu crkvu 1742. godine. U bombardovanju 12. juna 1849. godine i ona je bila zapaljena i srušen joj je toranj. U kasnijoj obnovi prvobitni toranj nije u celosti rekonstruisan. Novosadski katolici nisu bili zadovoljni izgledom, pa su u Gradskoj skupštini dali inicijativu da se podigne takav koji će priličiti Novom Sadu kao slobodnom kraljevskom gradu."
         android:textSize="16sp" />
 </RelativeLayout>

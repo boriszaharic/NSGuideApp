@@ -6,14 +6,19 @@ import android.util.Log;
 
 import com.example.bzaharic.nsguideapp.adapters.ViewPagerAdapter;
 import com.example.bzaharic.nsguideapp.database.DatabaseHelper;
+import com.example.bzaharic.nsguideapp.database.MonumentDAOWrapper;
 import com.example.bzaharic.nsguideapp.model.Monument;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.PageScrolled;
 import org.androidannotations.annotations.ViewById;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
 @EActivity(R.layout.activity_around)

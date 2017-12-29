@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
@@ -18,6 +19,9 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private static final int SPLASH_TIME_OUT = 2500;
 
+    @Bean
+    UtilityDatabaseClass utilityDatabaseClass;
+
     @ViewById
     ImageView image;
 
@@ -25,6 +29,12 @@ public class WelcomeActivity extends AppCompatActivity {
     @AfterViews
     void afterViews(){
         MainActivity_.intent(this).start();
+        initDatabase();
         finish();
+    }
+
+    @Background
+    void initDatabase(){
+        utilityDatabaseClass.addMonumentsInDatabase();
     }
 }
